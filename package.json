@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "npx nodemon ./app.js"
+  },
+  "type": "module"
+}

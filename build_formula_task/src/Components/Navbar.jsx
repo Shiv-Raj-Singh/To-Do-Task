@@ -16,7 +16,7 @@ export default function Navbar(){
                   <a className="nav-link" href="/Todo">Todo-Task</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Contact">Contact</a>
+                  <a className="nav-link" href="/profile">Contact</a>
                 </li>
               </ul>
             </div>

@@ -60,7 +60,6 @@ export default function Contact(){
                 <button type="submit" className="btn btn-primary" id='btn1' >Submit</button>
             </form>
 
-
             </div>
             <ToastContainer/>
         </>

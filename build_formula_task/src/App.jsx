@@ -5,6 +5,8 @@ import HomePage from './Pages/HomePage'
 import ContactPage from './Pages/ContacPaget'
 import TodoPage from "./Pages/Todo";
 
+const games = ['cricket' , 'bollyball' , 'kabbaddi' , 'kho-kho' , 'Tanice' , 'Ludo']
+const days = ['weekend' , 'weekdays' , 'everyday' , 'sometimes']
 
 
 export const myContext = createContext()
@@ -26,8 +28,10 @@ const reducer = (state , action)=>{
 
 
 function App() {
-    
+    const [game , setGame] = useState('')
+    const [day , setDay] = useState('')
 
+    console.log(game , day);
   return (
        <>
        <myContext.Provider value={reducer} >
@@ -37,12 +41,11 @@ function App() {
             <Routes>
 
             <Route  path="/" element={<HomePage />}    />
-            <Route path='/Contact'  element={<ContactPage  />}  />
+            <Route path='/profile'  element={<ContactPage  />}  />
             <Route path='/Todo'  element={<TodoPage  />}  />
 
             </Routes>
           </Router>
-
        </myContext.Provider>
     </>
 
