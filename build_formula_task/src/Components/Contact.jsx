@@ -22,7 +22,7 @@ export default function Contact(){
             })
     }
 
-    const onSubmitForm = (e)=>{
+    const onSubmitForm = async (e)=>{
         e.preventDefault()
 
         if(!isValidName(state.firstName)) toast.error('first name Should be Valid ')
@@ -33,8 +33,9 @@ export default function Contact(){
         
         // dispatch({type : 'SUBMIt' , payload : state})
         if( isValidName(state.firstName) && isValidName(state.lastName)  && isValidEmail(state.email)  && isValidPhone(state.phone)){
-            localStorage.setItem('User' , JSON.stringify(state))
+            await localStorage.setItem('User' , JSON.stringify(state))
             Nav('/' , {state : state})
+            console.log('inside if condition');
         }
     }
 
