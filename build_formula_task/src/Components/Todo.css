@@ -34,6 +34,7 @@ h1 {
     border: 1px solid grey;
     padding: 10px 20px;
     margin-bottom: 10px;
+    height: fit-content;
   }
   .form {
     display: flex;
@@ -49,11 +50,19 @@ h1 {
 
   .todo {
     display: flex;
+    height: fit-content;
     flex-direction: column;
   }
   
-
-
+  .todo-text{
+    height: fit-content;
+  }
+.todoText{
+  height: fit-content;
+  width: 70vw;
+  /* overflow: scroll; */
+  color: #fff;
+}
   button {
     font-size: 16px;
     background-color: rgb(217, 60, 35);
@@ -118,9 +127,18 @@ h1 {
       margin-bottom: 5%;
       /* margin-bottom: 10px; */
     }
+    .todoText{
+      width: 98%;
+      max-width: 100%;
+      color: rgb(13, 27, 27);
+      /* overflow: scroll; */
+    }
     .todo{
       background-color: rgb(224, 238, 99);
       border-radius: 5%;
+      width: 90vw;
+      overflow: scroll;
+      height: fit-content;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
     .takeTodo{

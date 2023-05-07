@@ -96,10 +96,7 @@ export default function TodoApp() {
                 onChange={(e) => setEditingText(e.target.value)}
               />
             ) : (
-              <div style={{
-                color : 'black',
-                
-              }}  >{todo.text}</div>
+              <div className='todoText'  >{todo.text}</div>
             )}
           </div>
           <div className="todo-actions">
@@ -109,7 +106,10 @@ export default function TodoApp() {
               <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
             )}
 
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button onClick={() =>{
+              let ans = confirm('Are you sure you want to delete it ? ')
+              ans && deleteTodo(todo.id)
+            }}>Delete</button>
           </div>
         </div>
       ))}
