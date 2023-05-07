@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import './User.css'
 
 export default function Home({user}){
     const Nav = useNavigate()    
@@ -8,8 +8,8 @@ export default function Home({user}){
     const [Name , setName] = useState('')
 
     useEffect(()=>{
-        if(state) setName(state.firstName + state.lastName)
-        else Nav('/')
+        if(state) setName(state.firstName +" "+ state.lastName)
+        else Nav('/profile')
     }, [state])
     console.log(state);
 
@@ -23,13 +23,14 @@ export default function Home({user}){
             }} >
 
           {
-             Name.length > 0 ? <h3 className="h3" >Welcome {Name} </h3> : <h3 className="h4" >Hey Welcome on our website</h3>
+             Name.length > 0 ? <h3 id="hd" >Welcome {Name} </h3> : Nav('/profile')
           }
 
             <button type="button" className="btn btn-primary mt-4" id="btn1" onClick={async ()=>{
                     let ans = confirm('Are sure want to Clear the Entire Data !')
-                     ans && localStorage.clear()
-                     await setName('')
+                     ans && localStorage.clear() 
+                     console.log('we naviging ');
+                     ans && Nav('/profile')
             }} >Clear</button>
             </div>
 

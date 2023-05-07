@@ -7,6 +7,7 @@ export default function TodoApp() {
     const [todos, setTodos] = React.useState([]);
   const [todo, setTodo] = React.useState("");
   const [todoEditing, setTodoEditing] = React.useState(null);
+
   const [editingText, setEditingText] = React.useState("");
 
   React.useEffect(() => {
@@ -24,14 +25,17 @@ export default function TodoApp() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    const newTodo = {
-      id: new Date().getTime(),
-      text: todo,
-      completed: false,
-    };
-    setTodos([...todos].concat(newTodo));
-    setTodo("");
+    if(todo.length < 1){
+      alert('Your Task is Empty !')
+    } else{
+      const newTodo = {
+        id: new Date().getTime(),
+        text: todo,
+        completed: false,
+      };
+      setTodos([...todos].concat(newTodo));
+      setTodo("");
+    }
   }
 
   function deleteTodo(id) {
@@ -66,28 +70,35 @@ export default function TodoApp() {
       <form className='form' onSubmit={handleSubmit}>
         <input
           type="text"
+          className='takeTodo'
           onChange={(e) => setTodo(e.target.value)}
           value={todo}
         />
-        <button type="submit">Add Todo</button>
+        <button id='addBtn' type="submit">Add Todo</button>
       </form>
+
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
           <div className="todo-text">
             <input
               type="checkbox"
               id="completed"
+              required
               checked={todo.completed}
               onChange={() => toggleComplete(todo.id)}
             />
             {todo.id === todoEditing ? (
               <input 
-                type="text"
+                type="text" 
+                style={{
+                  width : '70vw'
+                }}
                 onChange={(e) => setEditingText(e.target.value)}
               />
             ) : (
               <div style={{
-                color : 'pink'
+                color : 'black',
+                
               }}  >{todo.text}</div>
             )}
           </div>

@@ -12,7 +12,7 @@
 
   .Home{
     width: 50vw;
-    background-color: silver;
+    background-color: rgb(241, 122, 122);
     margin: auto;
     height: 40vh;
     padding : 2%;
@@ -70,6 +70,10 @@
   
   
   @media (max-width:700px) {
+    :root{
+      width: 100%;
+      max-width: 99vw;
+    }
     #hding{
       color: rgb(18, 18, 20);
       font-style: italic;
@@ -79,6 +83,7 @@
     }
     
     .customForm{
+
       width: 78vw;
       height: 66vh;
       padding: 2%;
@@ -120,6 +125,8 @@
 
   }
   @media (max-width: 450px) {
+
+
     *{
       padding: 0;
       margin: 0;
@@ -128,19 +135,36 @@
     .JoinContainer{
       width: 98%;
       margin-top: 20vh;
+      margin: auto;
     }
     .customForm{
       height: 60vh;
+      margin: auto;
       width: 97%;
       padding-right: 2%;
       padding-bottom: 3%;
-      background-color: rgba(235, 235, 48, 0.877);
+      background-color: rgba(165, 165, 105, 0.877);
     }
     .JoinPage{
       height: 100%;
       width: 100%;
-      margin: 1%;
+      /* margin: 1%; */
       padding-bottom: 2%;
     }
-  
+    
+  }
+
+  @media screen and (max-width : 600px) {
+    .Home{
+      width: 90vw;
+      border-radius: 4%;
+    }
+    #hd{
+      font-size: 1.2em;
+      color: rgb(49, 1, 1);
+    }
+    #btn1{
+      width: 50vw;
+      background-color: rgb(114, 108, 108);
+    }
   }

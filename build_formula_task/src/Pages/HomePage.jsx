@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Home from "../Components/Home"
 import Navbar from "../Components/Navbar"
 import ContactPage from "./ContacPaget";
@@ -5,16 +6,12 @@ import ContactPage from "./ContacPaget";
 
 
 
-export default function HomePage(){
-    const data = localStorage.getItem('User')
-    console.log(data);
+export default  function HomePage(){
+
     return (
-        <>
-        {
-            data ? <><Navbar/><Home  /> </> : <ContactPage/>
-        }
-   
-        
+    <>
+        <Navbar/>
+        <Home/>     
         </>
     )
 }
