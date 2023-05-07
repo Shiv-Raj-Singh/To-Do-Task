@@ -1,3 +1,24 @@
+/* Navbar CSS */
+#links{
+  text-transform: uppercase;
+}
+
+#links:hover{
+  text-transform: uppercase;
+  color: blue;
+}
+#logo1{
+  font-family: 'Brush Script MT', cursive;;
+}
+
+#logo1:hover{
+  color: rgb(16, 173, 235);
+  transform: scale(1.1);
+  transition: 1s ease-in;
+}
+
+
+
 h1 {
     text-align: center;
   }
