@@ -55,10 +55,10 @@ export default function Contact(){
                         <input type="email" value={state.email} className="form-control" required placeholder='Enter Your Email' name="email" onChange={handleOnChange}id="exampleInputEmail1" aria-describedby="emailHelp"/>
                     </div>
                     <div className="mb-2 field ">
-                        <input type="tel" value={state.phone} className="form-control" required placeholder='Enter Your Phone' name="phone" onChange={handleOnChange}id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <input type="text" value={state.phone} className="form-control" required placeholder='Enter Your Phone' name="phone" onChange={handleOnChange}id="exampleInputEmail1" aria-describedby="emailHelp"/>
                     </div>
                   
-                <button type="submit" className="btn btn-primary" id='btn1' >Submit</button>
+                <button type="submit" className="btn btn-primary mt-4" id='btn1' >Submit</button>
             </form>
 
             </div>

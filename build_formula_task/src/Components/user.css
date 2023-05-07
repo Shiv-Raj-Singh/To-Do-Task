@@ -22,7 +22,8 @@
   #exampleInputEmail1{
     color: black; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 3%;
+    margin: 3% auto;
+    padding: 2%;
   }
   .JoinPage{
     /* border: 2px solid rgb(106, 216, 15);    */
